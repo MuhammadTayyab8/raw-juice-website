@@ -1,0 +1,683 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 60vh;
+    width: 100vw;
+    background: url(./store.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar {
+    padding: 0 86px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.5));
+}
+
+.left ul {
+    display: flex;
+    padding: 0;
+}
+
+.right ul {
+    display: flex;
+}
+
+.right {
+    display: flex;
+}
+
+.left ul li {
+    list-style: none;
+    padding: 0 40px 0 0px;
+    margin-top: -70px;
+    color: white;
+    font-weight: bold;
+}
+
+.right ul li {
+    list-style: none;
+    padding: 0 0 0 40px;
+    margin-top: -70px;
+    color: white;
+    font-weight: bold;
+}
+
+.cart {
+    background-image: linear-gradient(to bottom, rgb(241, 156, 37) 8px, black 6px);
+    padding: 7px 6px 0 6px;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 20px;
+    margin: -70px 20px 20px 20px;
+    border-top: 6px solid black;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.5));
+}
+
+.cart li {
+    width: 16px;
+    height: 16px;
+}
+
+.cart i {
+    color: white;
+    font-weight: bold;
+    margin-top: -90px;
+    width: 16px;
+    height: 16px;
+
+}
+
+.cart span p {
+    color: white;
+    /* Set the color of the numbering */
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 14px;
+    /* Adjust the font size */
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.fixed-nav {
+    position: fixed;
+    padding-right: 0;
+    margin-right: 0;
+    height: 50px;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgb(223, 146, 39), rgb(244, 205, 76));
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    /* Example shadow */
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+.pagination {
+    display: flex;
+    /* Use flexbox layout */
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.page-number {
+    display: inline-flex;
+    /* Use inline-flex for alignment */
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    /* Center the content */
+}
+
+.active-page {
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 20px 80px 80px 80px;
+    grid-gap: 60px;
+}
+
+
+.box {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    width: 190px;
+    height: 280px;
+    margin-top: 20px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+
+}
+
+.img-box {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.images {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bottom {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+
+}
+
+.bottom p {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.bottom p span .price {
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.button_list {
+    position: relative;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-top: -4px;
+    background-color: rgb(0, 0, 0);
+    padding: 16px 16px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.catalog span p {
+    background-image: linear-gradient(to bottom, rgb(255, 184, 86), rgb(228, 143, 26));
+    padding: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.nav2 {
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: space-between;
+}
+
+.nav2 .na {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.na p {
+    padding: 10px 20px;
+    margin: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.na p:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    padding: 4px 20px;
+}
+
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-input {
+    width: 280px;
+    padding: 10px 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: 4px;
+}
+
+
+.search-button {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.fa-search {
+    font-size: 18px;
+    padding: 5px;
+}
+
+
+
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    margin-top: 50PX;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_bar ul {
+    list-style: none;
+    display: flex;
+    margin-left: 46px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+}
+
+.nav_bar ul li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lonks ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    padding-top: 6px;
+    margin-right: 96px;
+}
+
+/* .lonks ul li{
+        margin-right: 86px;
+    } */
+.lonks ul li i {
+    color: white;
+    text-decoration: none;
+    margin-left: 48px;
+}
+
+.product_page {
+    background-image: url(./product.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.front {
+    margin-left: 96px;
+    margin-top: 190px;
+    margin-right: 86px;
+}
+
+.front img {
+    width: 100px;
+    height: auto;
+}
+
+.detail {
+    margin-top: 130px;
+    padding-top: 0;
+}
+
+.detail p .rat {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 6px;
+    font-weight: bolder;
+}
+
+.detail h2 {
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+}
+
+.detail h2 span {
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    /* Adjust the width and color as needed */
+    color: transparent;
+    /* Set the text color */
+}
+
+.detail p span {
+    font-size: 16px;
+    color: black;
+    margin-left: 30px;
+}
+
+.detail p span .star {
+    color: black;
+}
+
+.detail p span .stares {
+    font-size: 14px;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    /* Adjust the width and color as needed */
+    color: transparent;
+    /* Set the text color */
+}
+
+.para {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-right: 96px;
+    color: white;
+    font-weight: 200;
+}
+
+.price_page {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    margin-top: 30px;
+}
+
+.btn_buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding-left: 30px;
+    font-size: 16px;
+    padding: 10px 16px;
+    margin-top: 30px;
+    border-radius: 30px;
+    width: 140px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.pre {
+    padding-top: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-left: -200px;
+}
+
+.pre span {
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.btn_buy span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgb(228, 143, 26), rgb(253, 242, 78));
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 34px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.modal-content h2 {
+    color: rgb(228, 143, 26);
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.modal-content .button {
+    background-image: linear-gradient(to bottom, rgb(228, 143, 26), rgb(253, 242, 78));
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cart_bg {
+    background-image: linear-gradient(to bottom, rgb(228, 143, 26), rgb(253, 242, 78));
+    padding: 116px 56px;
+    /* Reduced padding for better fit */
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    height: 100vh;
+    /* Adjusted to use viewport height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    box-sizing: border-box;
+}
+
+.prod_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 30px 20px 30px;
+}
+
+.prod_bar h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 3px solid #cecece;
+    width: 100vw;
+    padding-bottom: 10px;
+}
+
+.prod_bar h4 {
+    display: flex;
+    gap: 10px;
+    border-bottom: 3px solid #cecece;
+    padding-bottom: 15px;
+}
+
+.prod_cart {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    margin-bottom: 30px;
+}
+
+.prod_cart img {
+    width: 30px;
+    height: 80px;
+    padding: 0;
+}
+
+.title_cart {
+    line-height: 1px;
+    border-right: 2px solid #cecece;
+    padding-right: 30px;
+}
+
+.title_cart h4 {
+    margin-left: -140px;
+}
+
+.title_cart h5 {
+    margin-left: -140px;
+    color: #7e7e7e;
+    margin-bottom: 20px;
+}
+
+.inc_des {
+    display: flex;
+    align-items: center;
+    margin-left: -80px;
+    padding-left: 20px;
+    justify-content: center;
+    border-right: 2px solid #cecece;
+    height: 65.44px;
+    padding: 0 10px;
+    padding-right: 80px;
+    gap: 10px;
+    /* Space between the elements, adjust as needed */
+}
+
+.inc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    /* Adjust the size as needed */
+    height: 30px;
+    /* Adjust the size as needed */
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+}
+
+.number {
+    font-size: 20px;
+    /* Adjust the font size as needed */
+    text-align: center;
+}
+
+.remove_cart {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: red;
+}
+
+.bottom_cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: WHITE;
+    background-color: BLACK;
+    padding: 20px 56px;
+    margin-top: -30px;
+}
+
+.bottom_cart a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.back_cart {
+    font-weight: bolder;
+    font-size: 14px;
+    cursor: pointer;
+}
+.back_cart a{
+    text-decoration: none;
+    margin-left: -230px;
+}
+
+.total_cart {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #cecece;
+}
+
+.total_cart span {
+    color: white;
+}
+
+.btn_buy {
+    cursor: pointer;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-image: linear-gradient(to bottom, rgb(228, 143, 26), rgb(253, 242, 78));
+    color: white;
+    /* White text */
+    padding: 16px;
+    border-radius: 5px;
+    z-index: 1000;
+}

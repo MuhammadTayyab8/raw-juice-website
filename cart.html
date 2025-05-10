@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Search" onkeyup="searchProducts()">
+        <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+    </div>
+    
+    <div id="productList"></div>
+
+    <script>
+        const products = [
+    { id: 0, image: './img1-removebg-preview.png', title: 'Mango <span>Juice</span>', category: 'Mango', price: 12 },
+    { id: 1, image: './img4-removebg-preview.png', title: 'Fruit <span>Juice</span>', category: 'Lemon', price: 15 },
+    { id: 2, image: './lemon.png', title: 'Lemon <span>Juice</span>', category: 'Lemon', price: 20 }
+];
+
+function displayProducts(filteredProducts, containerId) {
+    const productList = document.getElementById(containerId);
+    if (filteredProducts.length > 0) {
+        productList.innerHTML = filteredProducts.map(product => `
+            <div class="box" onclick="opendetail(${product.id})">
+                <div class="img-box">
+                    <img class="images" src="${product.image}" />
+                </div>
+                <div class='bottom'>
+                    <p>${product.title}<br><span class="price">$${product.price}.00</span></p>
+                    <button class="button_list" onclick="addtocart(event, ${product.id})"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        `).join('');
+    } else {
+        productList.innerHTML = '<p>No products found</p>';
+    }
+}
+
+function searchProducts() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    
+    const filteredProducts = products.filter(product => 
+        product.title.toLowerCase().includes(searchInput) || 
+        product.category.toLowerCase().includes(searchInput)
+    );
+    
+    displayProducts(filteredProducts, 'productList');
+}
+
+// Initially display all products
+displayProducts(products, 'productList');
+
+    </script>
+</body>
+</html>

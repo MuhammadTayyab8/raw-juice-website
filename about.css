@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+    background: url(./aboutPage.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    overflow: hidden;
+    position: relative;
+}
+
+.navbar {
+    padding: 0 86px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.5));
+}
+
+.left ul {
+    display: flex;
+    padding: 0;
+}
+
+.right ul {
+    display: flex;
+}
+
+.right {
+    display: flex;
+}
+
+.left ul li {
+    list-style: none;
+    padding: 0 40px 0 0px;
+    margin-top: -70px;
+    color: white;
+    font-weight: bold;
+}
+
+.right ul li {
+    list-style: none;
+    padding: 0 0 0 40px;
+    margin-top: -70px;
+    color: white;
+    font-weight: bold;
+}
+
+.cart {
+    background-image: linear-gradient(to bottom, rgb(241, 156, 37) 8px, black 6px);
+    padding: 7px 6px 0 6px;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 20px;
+    margin: -70px 20px 20px 20px;
+    border-top: 6px solid black;
+    filter: drop-shadow(2px 6px 5px rgba(0, 0, 0, 0.5));
+}
+
+.cart li {
+    width: 16px;
+    height: 16px;
+}
+
+.cart i {
+    color: white;
+    font-weight: bold;
+    margin-top: -90px;
+    width: 16px;
+    height: 16px;
+
+}
+
+.cart span p {
+    color: white;
+    /* Set the color of the numbering */
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 14px;
+    /* Adjust the font size */
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.fixed-nav {
+    position: fixed;
+    padding-right: 0;
+    margin-right: 0;
+    height: 50px;
+    width: 100vw;
+    background-image: linear-gradient(to right, rgb(223, 146, 39), rgb(244, 205, 76));
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    /* Example shadow */
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    height: 70px;
+    margin-top: 150PX;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_bar ul {
+    list-style: none;
+    display: flex;
+    margin-left: 34px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14px;
+    margin-right: 26px;
+}
+
+.nav_bar ul li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lonks ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    padding-top: 6px;
+    margin-right: 96px;
+}
+
+/* .lonks ul li{
+    margin-right: 86px;
+} */
+.lonks ul li i {
+    color: white;
+    text-decoration: none;
+    margin-left: 48px;
+}
+
+.aboutImage h1{
+    text-align: center;
+    color: rgb(223, 146, 39); margin-bottom: 50px;
+}
+.aboutImage p{
+    margin: 40px 96px; text-align: center;
+}

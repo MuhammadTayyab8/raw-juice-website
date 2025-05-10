@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Raw Juice</title>
+</head>
+
+<body>
+    <div class="hero-desktop">
+        <div class="first-nav">
+            <div class="logo">
+                <img src="./public/logo.png" alt="Logo">
+
+            </div>
+            <div class="navbar">
+                <div class="left">
+                    <ul>
+                        <li><a href="./index.html" class="navbar-links" >Home</a></li>
+                        <li><a href="./stores.html" class="navbar-links" >Store</a></li>
+                        <li><a href="./about.html" class="navbar-links" >About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="right">
+                    <ul>
+                        <li><i class="fab fa-linkedin"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+
+                    </ul>
+                    <div class="cart" id="cart">
+                        <li><i class="fas fa-shopping-cart"></i></li><span>
+                            <p>0</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-mobile">
+        <div class="mobile-nav">
+
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo-mobile">
+            <img src="./public/logo.png" alt="Logo">
+        </div>
+
+
+        <div class="cart-mobile" id="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>
+                <p>0</p>
+            </span>
+        </div>
+
+
+        </div>
+      
+
+        <div class="mobile-menu" id="mobileMenu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./stores.html">Store</a></li>
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+
+        </div>
+
+
+    </div>
+      
+
+    <div class="content">
+        <div class="catalog">
+            <h2>Catalog</h2><span>
+                <p>New</p>
+            </span>
+        </div>
+    </div>
+
+    <div class="nav2">
+        <div class="na">
+            <p onclick="filterByCategory('all')">All</p>
+            <p onclick="filterByCategory('Mango')">Mango</p>
+            <p onclick="filterByCategory('Lemon')">Lemon</p>
+            <p onclick="filterByCategory('Coffee')">Coffee</p>
+            <p onclick="filterByCategory('Guava')">Guava</p>
+            <p onclick="filterByCategory('Grapefruit')">Grapefruit</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search">
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="root"></div>
+    </div>
+
+    <div class="content">
+        <div class="catalog" style="padding-top: 50px;">
+            <h2>Top Products</h2><span>
+                <p>New</p>
+            </span>
+        </div>
+        <div id="top">
+
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="./public/banner.png" alt="banner" >
+    </div>
+
+    <div class="content">
+        <div class="catalog">
+            <h2>Best Selling</h2><span>
+                <p>New</p>
+            </span>
+        </div>
+        <div id="best">
+
+        </div>
+    </div>
+
+    <div class="review">
+        <div class="back">
+            <div class="title">
+                Customer reviews
+            </div>
+            <div class="boxes">
+                <div class="b_1">
+                    <h3>Adam Gayle</h3>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit quae laboriosam aspernatur et,
+                        repudiandae libero illum sunt sequi aut ipsa ab modi, numquam id? Odio repudiandae autem
+                        consequuntur voluptatum dicta?</p>
+                </div>
+                <div class="bo_2">
+                    <h3>Adam Gayle</h3>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste quam architecto?
+                        Architecto accusantium non culpa animi error maxime, ullam aliquid quos vitae hic, harum earum!
+                        Vero culpa nihil laborum!</p>
+                </div>
+                <div class="b0_3">
+                    <h3>Adam Gayle</h3>
+                    <div class="stars">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis doloremque deleniti labore
+                        reprehenderit. Et voluptas vitae magni sed aspernatur, nesciunt, aliquid aut accusantium minus
+                        vero, excepturi ad iusto sunt atque.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="nav_bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <!-- <li><a href="#">Category</a></li> -->
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="./public/logo2.png" alt="" srcset="">
+        </div>
+        <div class="lonks">
+            <ul>
+                <li><i class="fab fa-linkedin"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div id="productDetail" style="display: none;">
+        <div class="product_page">
+            <div class="front">
+                <img id="detailImage" src="" alt="">
+            </div>
+            <div class="detail">
+                <h2 id="detailTitle"></h2>
+                <p><span class="rat">Product Rating</span>
+                    <span id="detailRating">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star stares"></i>
+                    </span>
+                </p>
+                <p class="para">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sint, similique esse eum doloribus
+                    illo cumque error explicabo iste aut incidunt, accusantium maiores perspiciatis dignissimos
+                    repellendus fuga nobis voluptates dolores?
+                </p>
+                <div class="price_page" id="detailPrice"></div>
+                <div class="btn_buy" onclick="openModel()">Buy Now<span>></span></div>
+                <div class="pre" id="ba"><span>←</span>Back to shop</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>Your order has been successfully placed.</p>
+            <p>Thank you for shopping with us.</p>
+            <a href="index.html" class="button">Continue Shopping</a>
+        </div>
+    </div>
+
+    <!-- 
+    
+    <div class="cart_bg">
+        <div class="prod_bar">
+            <h2>PRODUCTS</h2>
+            <h4><span id="Prod_num"></span> items</h4>
+        </div>
+        <div class="line"></div>
+        <div class="prod_cart">
+            <img src="./img1-removebg-preview.png" alt="" srcset="">
+            <div class="title_cart">
+                <h4>Fruit Juice</h4>
+                <h5>Juice</h5>
+            </div>
+            <div class="title_cart">
+                <h4 class="Price_cart">$12.00</h4>
+                <h5>Pricing</h5>
+            </div>
+            <div class="inc_des">
+                <span class="inc">+</span>
+                <span class="number">1</span>
+                <span class="inc">-</span>
+            </div>
+            <div class="title_cart">
+                <h4 class="Price_cart">$12.00</h4>
+                <h5>Pricing</h5>
+            </div>
+            <div class="remove_cart">&times;</div>
+        </div>
+
+        <div class="bottom_cart">          
+                <div class="back_cart"> ←  Back to shop</div>
+                <div class="total_cart">SUBTOTAL : <span>$12.00</span></div>
+        </div>
+        <div class="btn_buy" onclick="openModel()">Buy Now<span>></span></div>
+    </div>
+     -->
+    <div class="cart_bg">
+        <div class="prod_bar">
+            <h2>PRODUCTS</h2>
+            <h4><span id="Prod_num"></span> items</h4>
+        </div>
+        <div class="line"></div>
+        <div class="prod_cart_list"></div>
+        <div class="bottom_cart">
+            <a href="./index.html">
+                <div class="back_cart"> ← Back to shop</div>
+            </a>
+            <div class="total_cart">SUBTOTAL : <span>$0.00</span></div>
+        </div>
+        <div class="btn_buy" onclick="openModel()">Buy Now<span>></span></div>
+    </div>
+
+    <!-- Notification message -->
+    <div id="notification">Already in cart</div>
+
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var nav = document.querySelector('.first-nav');
+            if (window.scrollY > nav.offsetTop) {
+                nav.classList.add('fixed-nav');
+            } else {
+                nav.classList.remove('fixed-nav');
+            }
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+
+
+        const products = [
+            { id: 0, image: './public/img1-removebg-preview.png', title: 'Mango <span>Juice</span>', category: 'Mango', price: 12 },
+            { id: 1, image: './public/img4-removebg-preview.png', title: 'Fruit <span>Juice</span>', category: 'Lemon', price: 15 },
+            { id: 2, image: './public/lemon.png', title: 'Lemon <span>Juice</span>', category: 'Lemon', price: 20 },
+            { id: 3, image: './public/img4-removebg-preview.png', title: 'Coffee', category: 'Coffee', price: 18 },
+            { id: 4, image: './public/img5-removebg-preview.png', title: 'Guava <span>Juice</span>', category: 'Guava', price: 10 },
+            { id: 5, image: './public/img6-removebg-preview.png', title: 'Grapefruit <span>Juice</span>', category: 'Grapefruit', price: 16 },
+            { id: 6, image: './public/img1-removebg-preview.png', title: 'Mango <span>Juice</span>', category: 'Mango', price: 12 },
+            { id: 7, image: './public/img4-removebg-preview.png', title: 'Fruit <span>Juice</span>', category: 'Lemon', price: 15 },
+            { id: 8, image: './public/lemon.png', title: 'Lemon <span>Juice</span>', category: 'Lemon', price: 20 },
+            { id: 9, image: './public/coffee.png', title: 'Coffee', category: 'Coffee', price: 18 },
+            { id: 10, image: './public/img5-removebg-preview.png', title: 'Guava <span>Juice</span>', category: 'Guava', price: 10 },
+            { id: 11, image: './public/img4-removebg-preview.png', title: 'Grapefruit <span>Juice</span>', category: 'Grapefruit', price: 16 }
+        ];
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 1000);
+        }
+
+        function openModel() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'flex';
+        }
+
+
+
+
+        function displayProducts(filteredProducts, containerId) {
+            const productList = document.getElementById(containerId);
+            if (filteredProducts.length > 0) {
+                productList.innerHTML = filteredProducts.map(product => `
+            <div class="box" onclick="displayDetail(${product.id})">
+                <div class="img-box">
+                    <img class="images" src="${product.image}" />
+                </div>
+                <div class='bottom'>
+                    <p>${product.title}<br><span class="price">$${product.price}.00</span></p>
+                    <button class="button_list" onclick="addToCart(${product.id}, event)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        `).join('');
+            } else {
+                productList.innerHTML = `<p class="no-results">No results found</p>`;
+            }
+        }
+
+        function filterByCategory(category) {
+            const categoryLinks = document.querySelectorAll('.na p');
+            categoryLinks.forEach(link => link.classList.remove('active'));
+            document.querySelector(`.na p[onclick="filterByCategory('${category}')"]`).classList.add('active');
+
+            if (category === 'all') {
+                displayProducts(products, 'root');
+            } else {
+                const filteredProducts = products.filter(product => product.category === category);
+                displayProducts(filteredProducts, 'root');
+            }
+        }
+
+        function filterBySearch(query) {
+            const filteredProducts = products.filter(product => product.title.toLowerCase().includes(query.toLowerCase()));
+            displayProducts(filteredProducts, 'root');
+        }
+
+        document.getElementById('search-input').addEventListener('input', (event) => {
+            filterBySearch(event.target.value);
+        });
+
+        displayProducts(products, 'root');
+        displayProducts(products.slice(0, 4), 'best');
+        displayProducts(products.slice(0, 4), 'top');
+
+        function displayDetail(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                document.getElementById('detailImage').src = product.image;
+                document.getElementById('detailTitle').innerHTML = product.title;
+                document.getElementById('detailPrice').innerText = `$${product.price}.00`;
+
+                document.getElementById('root').style.display = 'none';
+                document.getElementById('productDetail').style.display = 'block';
+            }
+        }
+
+        document.getElementById('ba').onclick = function () {
+            document.getElementById('root').style.display = 'grid';
+            document.getElementById('productDetail').style.display = 'none';
+        };
+
+
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        document.querySelector('.cart').addEventListener('click', () => {
+            const cartBg = document.querySelector('.cart_bg');
+            cartBg.style.display = (cartBg.style.display === 'none' || cartBg.style.display === '') ? 'block' : 'none';
+        });
+
+        function addToCart(productId, event) {
+            event.stopPropagation();
+            const product = products.find(p => p.id === productId);
+            const existingProduct = cart.find(item => item.id === productId);
+            if (existingProduct) {
+                const a = document.getElementById('notification')
+                if (a) {
+                    a.style.display = "block";
+                    setTimeout(() => {
+                        a.style.display = 'none';
+                    }, 1000);
+                }
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+
+        }
+
+
+
+
+        function updateCart() {
+            const prodCartList = document.querySelector('.prod_cart_list');
+            const ProdNum = document.getElementById('Prod_num');
+            const totalCart = document.querySelector('.total_cart span');
+            let total = 0;
+
+            prodCartList.innerHTML = '';
+
+            cart.forEach(product => {
+                total += product.price * product.quantity;
+                prodCartList.innerHTML += `
+            <div class="prod_cart">
+                <img src="${product.image}" alt="${product.title}">
+                <div class="title_cart">
+                    <h4>${product.title}</h4>
+                    <h5>${product.category}</h5>
+                </div>
+                <div class="title_cart">
+                    <h4 class="Price_cart">$${product.price}.00</h4>
+                    <h5>Pricing</h5>
+                </div>
+                <div class="inc_des">
+                    <span class="inc" onclick="increaseQuantity(${product.id})">+</span>
+                    <span class="number">${product.quantity}</span>
+                    <span class="inc" onclick="decreaseQuantity(${product.id})">-</span>
+                </div>
+                <div class="title_cart">
+                    <h4 class="Price_cart">$${(product.price * product.quantity).toFixed(2)}</h4>
+                    <h5>Pricing</h5>
+                </div>
+                <div class="remove_cart" onclick="removeFromCart(${product.id})">&times;</div>
+            </div>
+        `;
+            });
+
+            ProdNum.innerText = cart.length;
+            totalCart.innerText = `$${total.toFixed(2)}`;
+            document.querySelector('#cart span p').innerText = cart.length;
+            document.getElementById('Prod_num').innerText = cart.length;
+            const subtotal = cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+            document.querySelector('.total_cart span').innerText = `$${subtotal.toFixed(2)}`;
+        }
+
+        function increaseQuantity(id) {
+            const product = cart.find(item => item.id === id);
+            if (product) {
+                product.quantity += 1;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            }
+        }
+
+        function decreaseQuantity(id) {
+            const product = cart.find(item => item.id === id);
+            if (product && product.quantity > 1) {
+                product.quantity -= 1;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCart();
+            }
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+        }
+
+        // Initial cart update on page load
+        updateCart();
+
+        const cartBg = document.querySelector('.cart_bg');
+
+        function showCart() {
+            if (cartBg) {
+                cartBg.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Disable body scroll
+            }
+        }
+
+        function hideCart() {
+            if (cartBg) {
+                cartBg.style.display = 'none';
+                document.body.style.overflow = ''; // Enable body scroll
+            }
+        }
+
+        // Example usage:
+        // showCart(); // To show the cart modal
+        // hideCart(); // To hide the cart modal
+
+
+    </script>
+</body>
+
+</html>
